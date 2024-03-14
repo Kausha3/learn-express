@@ -41,4 +41,9 @@ router.get('/username/:name', (req, res) => {
   }
 });
 
+// Get one user by id
+router.get('/:id', getUser, (req, res) => {
+    res.json(res.user);
+});
+
 module.exports = router;
